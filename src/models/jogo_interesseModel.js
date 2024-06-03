@@ -3,8 +3,9 @@ var database = require("../database/config");
 
 
 function inserirjogos(id,fkjogo,nivel) {
-  var instrucaoSql = `insert into jogo_interesse (fkusuario,fkjogo,nivel)= ${id} , ${fkjogo}, ${nivel}`;
+  var instrucaoSql = `insert into jogo_interesse (fkusuario,fkjogo,nivel) values  (${id} , ${fkjogo}, ${nivel})`;
 
+  
   return database.executar(instrucaoSql);
 }
 

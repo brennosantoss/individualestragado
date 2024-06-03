@@ -12,5 +12,8 @@ router.get("/verjogos", function (req, res) {
     jogo_interesseController.verjogos(req, res);
 });
 
+
+
+
 module.exports = router;
 

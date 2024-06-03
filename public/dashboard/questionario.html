@@ -88,6 +88,7 @@ function mudaPergunta(){
 mostraQuiz.innerHTML += `<h3>Pontos para Cs${pontoParaCs}<br>Pontos para LoL${pontoParaLol}<br>Ponto para valorant ${pontoParaValorant}</h3>`    
 
 inserirjogos()
+verjogos()
     }
 
 }
@@ -97,9 +98,11 @@ function inserirjogos() {
 
 //Recupere o valor da nova input pelo nome do id
 // Agora vá para o método fetch logo abaixo
-var fkjogoVar = 1;
+var fkjogoVar = 2;
 var nivelVar = pontoParaLol;
-var idVar = sessionStorage.ID_USUARIO
+var idVar = 2
+
+// console.log(ID_USUARIO)
 // Enviando o valor da nova input
 fetch("/jogo_interesse/inserirjogos", {
   method: "POST",
@@ -142,7 +145,7 @@ fetch("/jogo_interesse/inserirjogos", {
 return false;
 }
  function verjogos() {
-    fetch("/jogos_interesse/verjogos", {
+    fetch("/jogo_interesse/verjogos", {
       method: "GET",
     })
       .then(function (resposta) {
@@ -157,6 +160,9 @@ return false;
       });
   }
   
+
+
+
 
 
 
