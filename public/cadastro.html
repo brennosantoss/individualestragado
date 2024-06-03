@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/stylecadastro.css" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="mae">
+        <div class="nav">
+
+            <div class="options">
+
+                <div class="sessao_nav">
+                    <img src="assets/cs-go.svg" alt="">
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                </div>
+
+                <div class="sessao_nav">
+                    <img src="assets/cs-go.svg" alt="">
+                    <li>Sobre</li>
+                </div>
+                <div class="sessao_nav_lol">
+                    <div></div>
+                    <img src="assets/league-of-legends.svg" alt="">
+                    <a href="lol.html">League of Legends</a>
+                </div>
+
+                <div class="sessao_nav">
+                    <img src="assets/cs-go.svg" alt="">
+                    <a href="cs2.html">Counter-Strike 2</a>
+                </div>
+
+                <div class="sessao_nav">
+                    <img src="assets/valorantlogo.svg">
+                    <a href="valorant.html">valorant</a </div>
+                </div>
+            </div>
+
+
+            
+            <div class="entrar">
+                <button class="button2"><a href="cadastro.html" style="text-decoration: none;">Cadastre-se</a></button>
+            </div>
+
+
+        </div>
+
+        </div>
+        
+        </div>
+        <div class="pai">
+
+          <!-- <div class="mensagem_cadastro" id="cardErro">
+              <h1 id="mensagem_erro"></h1>
+          </div> -->
+            <div class="cadastro">
+                    
+                    <div class="card_cadastro">
+                        <h1>Cadastre-se</h1>
+                    <div class="sessao_nome">
+                    <span class="span_nome">nome:</span><br>
+                    <input type="text" id="nome_input" class="input_login"><br>
+              
+                    <span class="span_email">email:</span><br>
+                    <input type="text" id="email_input" class="input_login"><br>
+
+                    <span class="span_senha">senha:</span><br>
+                    <input type="text" id="senha_input" class="input_login"><br>
+
+
+                        <span class="span_confirma_senha">confirme a senha:</span><br>
+                        <input type="text" id="confirmacao_senha_input" class="input_login"><br>
+                 
+                    <button class="botao_cadastrar" onclick="cadastrar()"> cadastrar </button>
+                    <a href="login.HTML"><span class="possui_conta">Já possui conta?</span></a>
+              
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+
+
+function cadastrar() {
+
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = nome_input.value;
+    var emailVar = email_input.value;
+    var senhaVar = senha_input.value;
+    var confirmacaoSenhaVar = confirmacao_senha_input.value;
+    // var empresaVar = listaEmpresas.value
+    if (
+      nomeVar == "" ||
+      emailVar == "" ||
+      senhaVar == "" ||
+      confirmacaoSenhaVar == "" 
+      // empresaVar == ""
+    ) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "preencha os campos";
+
+    //   finalizarAguardar();
+      return false;
+    } else {
+      setInterval(sumirMensagem, 5000);
+    }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar,
+        // empresaServer: empresaVar
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          cardErro.style.display = "block";
+
+          mensagem_erro.innerHTML =
+            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+          setTimeout(() => {
+            window.location = "login.html";
+          }, "2000");
+
+          limparFormulario();
+        //   finalizarAguardar();
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        // finalizarAguardar();
+      });
+
+    return false;
+  }
+
+  // function listar() {
+  //   fetch("/empresas/listar", {
+  //     method: "GET",
+  //   })
+  //     .then(function (resposta) {
+  //       resposta.json().then((empresas) => {
+  //         empresas.forEach((empresa) => {
+  //           listaEmpresas.innerHTML += `<option value='${empresa.id}'>${empresa.cnpj}</option>`;
+  //         });
+  //       });
+  //     })
+  //     .catch(function (resposta) {
+  //       console.log(`#ERRO: ${resposta}`);
+  //     });
+  // }
+
+  function sumirMensagem() {
+    cardErro.style.display = "none";
+  }
+
+
+</script>

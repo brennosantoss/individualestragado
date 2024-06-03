@@ -1,0 +1,281 @@
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background-color: #13151B;
+    }
+
+    .mae {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      justify-content: space-between;
+      background-color: hsla( 222deg 10% 17% / 1);
+      width: 100%;
+       align-items: center;
+       height: 2%;
+       
+    }
+
+    .options {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 60%;
+      margin-top: 1%;
+    }
+.button2{
+  background-color: hsla(353, 85%, 53%, 1);
+  color: white;
+  background-size: cover;
+  border-color: hsla(353, 85%, 53%, 1);
+    width: 13vw;
+    margin-right: 2vw;
+    height: 2.3vw;
+    border-radius: 5px;
+}
+
+.button2:hover{
+  background-color: white;
+  border-color: white;
+  border-style: none;
+  text-align: center;
+  color: black;
+  text-decoration-color: black;
+}
+
+
+
+
+    .inicio {
+      /* background-image: url("https://images.hdqwalls.com/wallpapers/valorant-logo-4k-2020-i3.jpg"); */
+      background-color: #13151B;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 40vw;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+    }
+
+    .inicio_direita {
+      height: auto;
+      width: 50%;
+
+    }
+
+    .inicio_esquerda {
+      width: 50%;
+      height: 100%;
+    }
+
+    .imagem_inicio {
+      height: 60vw;
+      transform: scaleX(-1);
+      
+    }
+
+    .titulo {
+      display: flex;
+      color: white;
+      flex-direction: column;
+      text-align: center;
+
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: center;
+      flex-grow: 1;
+      height: 43vw;
+      transition-duration: 1s;
+      animation-timing-function: ease-in-out;
+    
+    }
+
+    .sessao_jogos {
+
+      background-color: #090909;
+      width: 100%;
+      height: 50vw;
+    }
+
+    .card1 {
+      height: 35vw;
+      width: 18%;
+      transition-duration: 1s;
+      animation-timing-function: ease-in-out;
+      background-image: url("https://s2-techtudo.glbimg.com/-A4IbwbPtpkAjiKcDPIDT-iJxGU=/0x0:2400x1350/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/1/1/q88ar8T2WQF2YEGOkKPw/counter-strike-2-ingles.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .card2 {
+      background-image: url("https://noticias.maisesports.com.br/wp-content/uploads/2022/03/VALORANT-Riot.jpg");
+      height: 35vw;
+      width: 18%;
+      transition-duration: 1s;
+      animation-timing-function: ease-in-out;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .card3 {
+      background-image: url("https://www.rocketleague.com/images/keyart/rl_evergreen_16x9.jpg");
+      height: 35vw;
+      width: 18%;
+      transition-duration: 1s;
+      animation-timing-function: ease-in-out;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .card4 {
+      background-image: url("https://mmorpgbr.com.br/wp-content/uploads/2022/02/league-of-legends-2022-patch-schedule-all-lol-season-12-updates-changes.jpeg");
+      height: 35vw;
+      width: 18%;
+      transition-duration: 1s;
+      animation-timing-function: ease-in-out;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+
+    .card1:hover {
+      flex-grow: 2;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .card2:hover {
+      flex-grow: 2;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+
+    .card3:hover {
+      flex-grow: 2;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .card4:hover {
+      flex-grow: 2;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+      overflow: hidden;
+
+    }
+
+    .titulo_inicio {
+      font-size: 3.7vw;
+      width: 60%;
+      text-align: center;
+      margin-left: 7vw;
+      color: white;
+    }
+
+    .span_inicio {
+      font-size: 1vw;
+
+    }
+
+    a{
+      text-decoration: none;
+      color: white;
+    }
+  /* .sessao_nav{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border: solid black;
+    width: 100%;
+    size: cover;
+  } */
+  .sessao_nav{
+    display: flex;
+    flex-direction: row;
+    size: cover;
+    align-items: center;
+    justify-content: center;
+    height: 3.2vw;
+    margin-top: -0.5vw;
+    width: 100%;
+    margin-top: -1.69%;
+    border-bottom: none;
+    border-top: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .sessao_nav_lol{
+    display: flex;
+    flex-direction: row;
+    size: cover;
+    align-items: center;
+    justify-content: center;
+    height: 3.2vw;
+    margin-top: -0.5vw;
+    width: 100%;
+    margin-top: -1.69%;
+    border-bottom: none;
+    border-top: none;
+    font-family: Arial, Helvetica, sans-serif;
+    
+  }
+  .sessao_nav_lol img{
+    height: 1.9vw;
+    margin-right: 5%;
+  }
+  
+
+
+  .sessao_nav img{
+    height: 1.9vw;
+    margin-right: 5%;
+  }
+  .sessao_nav_lol:hover{
+    border: solid 0.2vh black ;
+    border-bottom: none;
+    border-top: none; 
+    background-color: #13151B;
+    background-size: cover;
+ 
+  }
+  /* .sessao_nav img{
+    justify-content: center;
+    align-items: center;
+    height: 2vw;
+  } */
+
+  .sessao_nav:hover{
+    border: solid 0.2vh black ;
+    border-bottom: none;
+    border-top: none; 
+    background-color: #13151B;
+    background-size: cover;
+  }
+
+
+  .descubra_jogo{
+width: 100%;
+height: 30vw;
+display: flex;
+flex-direction: row;
+align-items: center;
+background-color: aquamarine;
+flex-direction: column;
+}
+
