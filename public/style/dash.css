@@ -1,15 +1,24 @@
-
+body{
+    background-image: url('https://i.pinimg.com/originals/6f/93/50/6f93508f78319faf2a9929632b3fc041.jpg');
+    background-size: cover;
+    
+}
 .mae{
     height: 100%;
     width: 100%;
+
 }
 .dashbord{
-background-color: blue;
 width: 100%;
-height: 51.5vw;
 
+}.titulo_ranking{
+    font-size: 3.5vw;
 }
 
+.titulo_div{
+    background-color: darkcyan;
+    font-size: 3.5vw;
+}
 nav{
     height: 4vw;
     width: 100%;
@@ -17,9 +26,8 @@ nav{
 }
 
  .corpo{
-    background-color: lawngreen;
-    width: 65%;
-     height: 60vw;
+    width: 100%;
+     height: 60%;
      display: flex;
      justify-content: center;
      flex-direction: column;
@@ -27,9 +35,10 @@ nav{
     }
 
     .grafico{
-        height: 80%;
-        width: 100%;
-        background-color: gray;
+        height: 90%;
+        width: 50%;
+        background-color:hsla( 222deg 10% 17% / 1);;
+        border: solid 2px gray;
     }
 
 

@@ -11,6 +11,13 @@ router.post("/inserirjogos", function (req, res) {
 router.post("/inserirpontosValorant", function (req, res) {
     jogo_interesseController.inserirpontosValorant(req, res);
 })
+router.post("/inserirjogos", function (req, res) {
+    jogo_interesseController.inserirjogos(req, res);
+})
+
+router.post("/inserirpontoslol", function (req, res) {
+    jogo_interesseController.inserirpontoslol(req, res);
+})
 
 
 

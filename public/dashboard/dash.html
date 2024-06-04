@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../style/style.css" />
     <link rel="stylesheet" href="./../style/dash.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <title>Dashbord</title>
 </head>
@@ -17,9 +18,10 @@
 
             </nav>
             <div class="corpo">
-                <h1>ranking</h1>
-                <div class="grafico">
-
+                <div class="titulo_div">
+                <h1 class="titulo_ranking">nivel de compatibilidade</h1>
+                </div><div class="grafico">
+                    <canvas id="myChart"></canvas>
                 </div>
 
             </div>
@@ -33,3 +35,28 @@
     
 </body>
 </html>
+
+<script>
+    const ctx = document.getElementById('myChart');
+  
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow'],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19,5],
+          borderWidth: 1,
+          borderColor: 'hsla(353, 85%, 53%, 1)',
+          backgroundColor: 'hsla(353, 85%, 53%, 1)'
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>

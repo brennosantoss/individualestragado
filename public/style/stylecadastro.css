@@ -1,7 +1,7 @@
 body{
     background-image: url('../assets/lol_fundo-transformed.jpeg');
-   background-size: cover;
-    
+    background-size: cover;
+
 }
 .mensagem_cadastro{
     width: 10%;
@@ -11,7 +11,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-   
+    
 }
 
 .cadastro{
