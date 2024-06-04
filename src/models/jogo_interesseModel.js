@@ -5,7 +5,12 @@ var database = require("../database/config");
 function inserirjogos(id,fkjogo,nivel) {
   var instrucaoSql = `insert into jogo_interesse (fkusuario,fkjogo,nivel) values  (${id} , ${fkjogo}, ${nivel})`;
 
-  
+  return database.executar(instrucaoSql);
+}
+
+function inserirpontosValorant(id,nivelvalorant) {
+  var instrucaoSql = `insert into jogo_interesse (fkusuario,fkjogo,nivel) values  (${id} , 3 , ${nivelvalorant})`;
+
   return database.executar(instrucaoSql);
 }
 
@@ -16,4 +21,5 @@ function verjogos() {
 }
 
 
-module.exports = { inserirjogos, verjogos };
+module.exports = { inserirjogos, inserirpontosValorant,verjogos };
+    

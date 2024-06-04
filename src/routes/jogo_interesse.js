@@ -8,6 +8,12 @@ router.post("/inserirjogos", function (req, res) {
     jogo_interesseController.inserirjogos(req, res);
 })
 
+router.post("/inserirpontosValorant", function (req, res) {
+    jogo_interesseController.inserirpontosValorant(req, res);
+})
+
+
+
 router.get("/verjogos", function (req, res) {
     jogo_interesseController.verjogos(req, res);
 });
