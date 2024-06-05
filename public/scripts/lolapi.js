@@ -32,9 +32,9 @@ function displayChampions(champions) {
         `;
 
         
-        if(champion.tags.indexOf('Mage') == 1){
+        // if(champion.tags.indexOf('Mage') == 1){
         championsContainer.appendChild(championElement);
-        }
+        // }
 
     });
 }

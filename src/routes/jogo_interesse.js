@@ -23,9 +23,10 @@ router.get("/verjogos", function (req, res) {
     jogo_interesseController.verjogos(req, res);
 });
 
-router.get("/:Id", function (req, res) {
-    jogo_interesseController.buscarPorusuario(req, res);
-  });
+
+router.get("/verniveis", function (req, res) {
+    jogo_interesseController.verniveis(req, res);
+});
 
 
 

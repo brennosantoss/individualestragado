@@ -187,7 +187,9 @@
     }
 
     .span_inicio {
-      font-size: 1vw;
+      font-size: 1.3vw;
+      color: white;
+      text-align: center;
 
     }
 
@@ -275,7 +277,87 @@ height: 30vw;
 display: flex;
 flex-direction: row;
 align-items: center;
-background-color: aquamarine;
+background-image: url('https://www.gazduirejocuri.ro/gameimg/51/xbanner.jpg.pagespeed.ic.g7R34rrzlV.jpg') ;
 flex-direction: column;
+color: white;
+background-size: cover;
 }
 
+.titulo_times{
+  height: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5vw;
+  color: white;
+}
+
+.botao_quiz{
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.descubra{
+  font-size: 4vw;
+}
+
+.texto_questionario{
+font-size: 2vw;
+}
+
+.desenvolvimento{
+  width: 100%;
+  height: 30vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.desenvolvimento_direita{
+  width: 50%;
+  height: 100%;
+  display: flex;
+ background-color: aqua;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+
+.desenvolvimento_esquerda{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo_objetivo{
+  display: flex;
+  align-items: center;
+  background-color:#13151B;
+  justify-content: center;
+  color: white;
+}
+
+
+
+.texto_desenvolvimento{
+font-size: 1.5vw;
+color: white;
+width: 40%;
+text-align: center;
+margin-left: 5%;
+margin-right: 5%;
+}
+
+.imagem_desenvolvimento{
+  height: 80%;
+}
+
+.texto_porque{
+font-size:1.9vw;
+width: 90%;
+}

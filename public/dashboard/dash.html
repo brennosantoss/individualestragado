@@ -11,7 +11,7 @@
   <title>Dashbord</title>
 </head>
 
-<body onload="mostranome()">
+<body onload="chamarFuncoes()">
 
   <div class="mae">
 
@@ -48,15 +48,73 @@
 </html>
 
 <script>
-  const ctx = document.getElementById('myChart');
+listaNiveis = []
 
-  new Chart(ctx, {
+
+
+
+  // new Chart(ctx, {
+  //   type: 'bar',
+  //   data: {
+  //     labels: ['Red', 'Blue', 'Yellow'],
+  //     datasets: [{
+  //       label: '# of Votes',
+  //       data: [12, 19, 5],
+  //       borderWidth: 1,
+  //       borderColor: 'hsla(353, 85%, 53%, 1)',
+  //       backgroundColor: 'hsla(353, 85%, 53%, 1)'
+  //     }]
+  //   },
+  //   options: {
+  //     scales: {
+  //       y: {
+  //         beginAtZero: true
+  //       }
+  //     }
+  //   }
+  // });
+
+
+function chamarFuncoes(){
+  verniveis().then(constroiGrafico)
+  .catch(error => console.error(error));
+}
+
+  function mostranome() {
+    mostra_nome.innerHTML = `Olá ${sessionStorage.getItem("NOME_USUARIO")}`
+  }
+
+  function sair() {
+    window.location = "../index.html";
+  }
+
+  function verniveis(){
+    var fkusuario = sessionStorage.getItem("ID_USUARIO");
+
+    console.log(fkusuario)
+    
+    return fetch(`/jogo_interesse/verniveis?fkusuario=${fkusuario}`,{
+      method: 'GET'
+    }).then(function(resposta){
+      resposta.json().then((jogo_interesse) =>{
+        jogo_interesse.forEach((jogo_interesse) =>{
+          listaNiveis.push(jogo_interesse.nivel)
+          console.log(jogo_interesse.nivel)
+        })
+      })
+    })
+  }
+
+
+  function constroiGrafico(){
+    const ctx = document.getElementById('myChart');
+    new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['Red', 'Blue', 'Yellow'],
+      labels: ['Counter Strike','League of Legends','Valorant'],
       datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 5],
+        label: 'Nivel de Compatibilidade',
+        data: listaNiveis,
         borderWidth: 1,
         borderColor: 'hsla(353, 85%, 53%, 1)',
         backgroundColor: 'hsla(353, 85%, 53%, 1)'
@@ -71,14 +129,6 @@
     }
   });
 
-
-
-
-  function mostranome() {
-    mostra_nome.innerHTML = `Olá ${sessionStorage.getItem("NOME_USUARIO")}`
   }
-
-  function sair() {
-    window.location = "../index.html";
-  }
+      
 </script>
