@@ -117,7 +117,7 @@
                     console.log(json);
                     console.log(JSON.stringify(json));
                     sessionStorage.EMAIL_USUARIO = json[0].email;
-                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.NOME_USUARIO = json[0].nome;
                     sessionStorage.ID_USUARIO = json[0].id;
                     sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
 

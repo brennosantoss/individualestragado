@@ -19,11 +19,13 @@ router.post("/inserirpontoslol", function (req, res) {
     jogo_interesseController.inserirpontoslol(req, res);
 })
 
-
-
 router.get("/verjogos", function (req, res) {
     jogo_interesseController.verjogos(req, res);
 });
+
+router.get("/:Id", function (req, res) {
+    jogo_interesseController.buscarPorusuario(req, res);
+  });
 
 
 

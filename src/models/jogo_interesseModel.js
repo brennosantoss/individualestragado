@@ -27,5 +27,7 @@ function verjogos() {
 }
 
 
+
+
 module.exports = { inserirjogos, inserirpontosValorant,verjogos, inserirpontoslol };
     

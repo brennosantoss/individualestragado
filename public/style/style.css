@@ -11,7 +11,7 @@
       padding: 0;
     }
 
-    .nav {
+    .nav{
       display: flex;
       flex-direction: row;
       list-style: none;
@@ -20,9 +20,9 @@
       width: 100%;
        align-items: center;
        height: 2%;
-       
     }
 
+   
     .options {
       display: flex;
       flex-direction: row;
