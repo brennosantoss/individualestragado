@@ -327,3 +327,11 @@ margin-bottom: 40%;
     font-size: 1.3vw;
     text-align: justify;
 }
+
+.campeoes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3vw;
+}
